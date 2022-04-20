@@ -1,0 +1,12 @@
+.nav-bar {
+    display: flex;
+    padding: 2rem 4rem;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    align-items: center;
+
+    @include respond(tab-land) {
+        flex-direction: column;
+        align-items: center;
+    }
+}

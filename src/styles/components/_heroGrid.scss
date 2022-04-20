@@ -1,0 +1,123 @@
+.hero {
+    display: flex;
+    padding: 2rem 1rem;
+    justify-content: space-around;
+    flex-direction: column;
+    &__upperDiv {
+        display: flex;
+        & > div {
+            width: 50%;
+        }
+    }
+    &__imageDiv {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        width: 40rem !important;
+        height: 35rem;
+    }
+    &__imageDiv--loading {
+        padding: 1rem 2rem;
+        align-self: center;
+        width: 40rem !important;
+        height: 35rem;
+        border-radius: 50%;
+        background-image: linear-gradient(
+            90deg,
+            $gradient-first 0px,
+            $gradient-second 40px,
+            $gradient-first 80px
+        );
+        background-size: 400rem;
+        animation: shine-lines 2s infinite linear;
+    }
+    &__image {
+        width: 40rem;
+        height: 35rem;
+        border-radius: 50%;
+    }
+    &__infoDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 3rem;
+    }
+    &__name {
+        color: lightgray;
+        font-size: 6rem;
+        text-align: center;
+    }
+    &__link {
+        color: lightblue;
+        text-decoration: underline;
+        font-size: 1.75rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    &__description {
+        color: lightgray;
+        font-size: 2rem;
+        font-weight: 200;
+    }
+    &__additionalDiv {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    &__seriesDiv,
+    &__storiesDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1;
+        margin: 2rem 0.2rem;
+        padding: 0.2rem 2rem;
+        & h4 {
+            color: antiquewhite;
+            font-size: 3.5rem;
+            align-self: center;
+        }
+        & span {
+            font-size: 2rem;
+            padding: 1rem 4rem;
+            text-align: start;
+            color: lightblue;
+            display: inline;
+        }
+        & h5 {
+            color: lightgray;
+            font-size: 2rem;
+            font-weight: 200;
+        }
+    }
+    &__seriesDiv {
+        border-right: 0.1px solid antiquewhite;
+    }
+    &__nameGrid {
+        padding-left: 10rem;
+    }
+    @include respond(tab-port) {
+        padding: 0 2rem;
+        &__name {
+            align-self: center;
+        }
+        &__description {
+            align-self: center;
+        }
+        &__upperDiv {
+            flex-direction: column;
+            align-items: center;
+            & > div {
+                width: auto;
+            }
+        }
+        &__nameGrid {
+            padding: 2rem;
+        }
+        &__seriesDiv {
+            padding: 0;
+        }
+    }
+}

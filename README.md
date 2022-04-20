@@ -1,10 +1,30 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7665849&assignment_repo_type=AssignmentRepo)
-Week6 Marvel Exercise New Version
+# Protein React Bootcamp Week-3 Homework
 
-Özelikle dikkat etmenizi istediğimiz noktalar
+This repo represents my solution for week-3 homework.
 
-1. Auto complete (Arama alanı için)
-2. Detail page (Arama alanında çıkan sonuçlardan birine tıklanınca veya sayfadaki itemlardan birine tıklanınca)
-3. Multi Language (İngilizce, Türkçe, Fransızca)
+In order to make repo works, first step you have to is to create a ```.env.local``` file and add your keys to it. (I hide my public/private keys for protection issues.)
 
-Deadline - 24.04.2022 10:00
+An example `.env.local` file as follows:
+
+```
+REACT_APP_PUBLIC_KEY = xxxxxxxxxxxxx
+REACT_APP_PRIVATE_KEY = xxxxxxxxxx
+REACT_APP_ENCODED_KEY = xxxxxxxxx
+```
+
+> Please note that ENCODED_KEY has to be generated for MarvelAPI. The algoritm to generate it `digest(paste0(ts, privateKey, publicKey), algo="md5")`. I use ts parameter as "1". You can use [this link](https://www.md5hashgenerator.com/) to generate your own key. And please do not proceed before generate `.env.local` file.
+
+After you set your `.env.local` file, next step is to install npm packages with `npm i`. Now you are ready to start.
+
+You can reach my solution [here](https://marvelheroes0001.web.app)
+
+## Snapshots
+
+-   Desktop
+
+![desktop](./desktop.gif)
+
+-   Mobile
+
+![tablet](./mobile.gif)
+
